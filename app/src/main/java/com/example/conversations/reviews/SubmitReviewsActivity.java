@@ -26,7 +26,8 @@ public class SubmitReviewsActivity extends AppCompatActivity implements Conversa
     BVConversationsClient bvClient = App.get(this).getBvClient();
 
     // Send Request
-    ReviewSubmissionRequest request = new ReviewSubmissionRequest.Builder(Action.Submit, Constants.PRODUCT_ID)
+    ReviewSubmissionRequest request = new ReviewSubmissionRequest
+        .Builder(Action.Submit, Constants.PRODUCT_ID)
         .reviewText("this is awesome, would recommend")
         .rating(4)
         .title("Test title")
