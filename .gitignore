@@ -1,0 +1,10 @@
+*.iml
+.gradle
+/local.properties
+.idea/
+app/src/main/assets/bvsdk_config_staging.json
+app/src/main/assets/bvsdk_config_prod.json
+.DS_Store
+/build
+/captures
+.externalNativeBuild

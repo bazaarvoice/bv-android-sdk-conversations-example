@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">Conversations Sample</string>
+  <string name="title_activity_display_reviews">Display Reviews</string>
+  <string name="title_activity_submit_review">Submit Review</string>
+</resources>
