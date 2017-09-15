@@ -13,47 +13,117 @@
   <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="8dp">
 
 
     <TextView
       android:id="@+id/title"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="8dp"
-      android:textSize="18sp"
+      android:textColor="@android:color/black"
+      android:textSize="24sp"
+      android:textStyle="bold"
       tools:text="Title Here"/>
-
-    <TextView
-      android:id="@+id/authorNick"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:padding="8dp"
-      android:textSize="18sp"
-      tools:text="Author Nickname"/>
 
     <TextView
       android:id="@+id/reviewBody"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="8dp"
       android:textSize="18sp"
       tools:text="Review Body Here"/>
+
+    <TextView
+      android:id="@+id/authorNick"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      tools:text="Author Nickname"/>
 
     <TextView
       android:id="@+id/rating"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="8dp"
       android:textSize="18sp"
-      tools:text="4.1"/>
+      tools:text="Rating: 4.1"/>
 
     <TextView
       android:id="@+id/badges"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:padding="8dp"
       android:textSize="18sp"
-      tools:text="badge1 badge2"/>
+      tools:text="Badges: [ badge1, badge2 ]"/>
+
+    <TextView
+      android:id="@+id/submissionDate"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Submission Date: 2017-07-02"/>
+
+    <TextView
+      android:id="@+id/isRecommended"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Is Recommended? true"/>
+
+    <TextView
+      android:id="@+id/isSyndicated"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Is Syndicated? false"/>
+
+    <TextView
+      android:id="@+id/helpfulCount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Helpful Count: 3"/>
+
+    <TextView
+      android:id="@+id/notHelpfulCount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Not Helpful Count: 1"/>
+
+    <TextView
+      android:id="@+id/secondaryRatings"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Secondary Ratings: [ asdf, asdf ]"/>
+
+    <TextView
+      android:id="@+id/photoCount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Photo Count: 8"/>
+
+    <TextView
+      android:id="@+id/videoLinkCount"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Video Link Count: 1 "/>
+
+    <TextView
+      android:id="@+id/numComments"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="TextView"
+      android:textSize="18sp"
+      tools:text="Comment Count: 3"/>
   </LinearLayout>
 </android.support.v7.widget.CardView>

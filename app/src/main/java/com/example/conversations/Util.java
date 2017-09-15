@@ -7,6 +7,7 @@ import com.bazaarvoice.bvandroidsdk.Badge;
 import com.bazaarvoice.bvandroidsdk.Error;
 import com.bazaarvoice.bvandroidsdk.FieldError;
 import com.bazaarvoice.bvandroidsdk.FormError;
+import com.bazaarvoice.bvandroidsdk.SecondaryRating;
 
 import java.util.List;
 import java.util.Map;
@@ -36,10 +37,13 @@ public class Util {
 
   public static String bvErrorsToString(List<Error> errors) {
     StringBuilder stringBuilder = new StringBuilder();
+    stringBuilder.append("[");
     for (Error error: errors) {
-      stringBuilder.append("code").append(error.getCode()).append(", ")
-          .append("message: ").append(error.getMessage()).append("\n");
+      stringBuilder
+          .append("code: ").append(error.getCode()).append(", ")
+          .append("message: ").append(error.getMessage()).append(";");
     }
+    stringBuilder.append("]");
     return stringBuilder.toString();
   }
 
@@ -57,6 +61,19 @@ public class Util {
         .append("code: ").append(fieldError.getCode()).append(", ")
         .append("field: ").append(fieldError.getField()).append(", ")
         .append("message").append(fieldError.getMessage()).append("\n");
+    return stringBuilder.toString();
+  }
+
+  public static String secondaryRatingsToString(Map<String, SecondaryRating> secondaryRatingMap) {
+    StringBuilder stringBuilder = new StringBuilder();
+    stringBuilder.append("[");
+    for (Map.Entry<String, SecondaryRating> entry : secondaryRatingMap.entrySet()) {
+      final SecondaryRating secondaryRating = entry.getValue();
+      stringBuilder
+          .append("label: ").append(secondaryRating.getLabel()).append(", ")
+          .append("value: ").append(secondaryRating.getValue()).append(";");
+    }
+    stringBuilder.append("]");
     return stringBuilder.toString();
   }
 }

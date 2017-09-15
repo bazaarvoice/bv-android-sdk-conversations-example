@@ -44,23 +44,43 @@ public class ReviewsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
   }
 
   private static class ViewHolder extends RecyclerView.ViewHolder {
-    private TextView title, reviewBody, rating, badges, authorNick;
+    private TextView title, reviewBody, rating, badges, authorNick,
+    submissionDate, isRecommended, isSyndicated, helpfulCount, notHelpfulCount,
+    secondaryRatings, photoCount, videoLinkCount, commentCount;
 
     public ViewHolder(View itemView) {
       super(itemView);
-      title = (TextView) itemView.findViewById(R.id.title);
-      reviewBody = (TextView) itemView.findViewById(R.id.reviewBody);
-      rating = (TextView) itemView.findViewById(R.id.rating);
-      badges = (TextView) itemView.findViewById(R.id.badges);
-      authorNick = (TextView) itemView.findViewById(R.id.authorNick);
+      title = itemView.findViewById(R.id.title);
+      reviewBody = itemView.findViewById(R.id.reviewBody);
+      rating = itemView.findViewById(R.id.rating);
+      badges = itemView.findViewById(R.id.badges);
+      authorNick = itemView.findViewById(R.id.authorNick);
+      submissionDate = itemView.findViewById(R.id.submissionDate);
+      isRecommended = itemView.findViewById(R.id.isRecommended);
+      isSyndicated = itemView.findViewById(R.id.isSyndicated);
+      helpfulCount = itemView.findViewById(R.id.helpfulCount);
+      notHelpfulCount = itemView.findViewById(R.id.notHelpfulCount);
+      secondaryRatings = itemView.findViewById(R.id.secondaryRatings);
+      photoCount = itemView.findViewById(R.id.photoCount);
+      videoLinkCount = itemView.findViewById(R.id.videoLinkCount);
+      commentCount = itemView.findViewById(R.id.numComments);
     }
 
     public void bind(Review review) {
-      title.setText(String.format("title: %s", review.getTitle()));
-      reviewBody.setText(String.format("review: %s", review.getReviewText()));
-      rating.setText(String.format(Locale.US, "rating: %d", review.getRating()));
-      badges.setText(String.format("badges: %s", Util.badgesToString(review.getBadges())));
-      authorNick.setText(String.format("authorId: %s", review.getAuthorId()));
+      title.setText(String.format("Title: %s", review.getTitle()));
+      reviewBody.setText(String.format("Review Text: %s", review.getReviewText()));
+      rating.setText(String.format(Locale.US, "Rating: %d", review.getRating()));
+      badges.setText(String.format("Badges: %s", Util.badgesToString(review.getBadges())));
+      authorNick.setText(String.format("AuthorId: %s", review.getAuthorId()));
+      submissionDate.setText(String.format("Submission Date: %s", review.getSubmissionDate()));
+      isRecommended.setText(String.format("IsRecommended: %s", review.getRecommended()));
+      isSyndicated.setText(String.format("IsSyndicated: %s", review.getSyndicated()));
+      helpfulCount.setText(String.format("HelpfulCount: %s", review.getTotalPositiveFeedbackCount()));
+      notHelpfulCount.setText(String.format("Not HelpfulCount: %s", review.getTotalNegativeFeedbackCount()));
+      secondaryRatings.setText(String.format("SecondaryRatings: %s", Util.secondaryRatingsToString(review.getSecondaryRatings())));
+      photoCount.setText(String.format("PhotoCount: %s", review.getPhotos().size()));
+      videoLinkCount.setText(String.format("VideoLinkCount: %s", review.getVideos().size()));
+      commentCount.setText(String.format("CommentCount: %s", review.getComments().size()));
     }
   }
 }
