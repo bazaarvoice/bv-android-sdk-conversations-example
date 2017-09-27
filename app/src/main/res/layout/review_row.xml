@@ -30,6 +30,7 @@
       android:id="@+id/reviewBody"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Review Body Here"/>
 
@@ -37,6 +38,7 @@
       android:id="@+id/authorNick"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Author Nickname"/>
 
@@ -44,6 +46,7 @@
       android:id="@+id/rating"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Rating: 4.1"/>
 
@@ -51,6 +54,7 @@
       android:id="@+id/badges"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Badges: [ badge1, badge2 ]"/>
 
@@ -59,6 +63,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Submission Date: 2017-07-02"/>
 
@@ -67,6 +72,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Is Recommended? true"/>
 
@@ -75,6 +81,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Is Syndicated? false"/>
 
@@ -83,6 +90,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Helpful Count: 3"/>
 
@@ -91,6 +99,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Not Helpful Count: 1"/>
 
@@ -99,6 +108,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Secondary Ratings: [ asdf, asdf ]"/>
 
@@ -107,6 +117,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Photo Count: 8"/>
 
@@ -115,6 +126,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Video Link Count: 1 "/>
 
@@ -123,6 +135,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:text="TextView"
+      android:textColor="@android:color/black"
       android:textSize="18sp"
       tools:text="Comment Count: 3"/>
   </LinearLayout>
