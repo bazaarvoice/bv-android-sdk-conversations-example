@@ -6,7 +6,6 @@ import android.content.Context;
 import com.bazaarvoice.bvandroidsdk.BVConversationsClient;
 import com.bazaarvoice.bvandroidsdk.BVLogLevel;
 import com.bazaarvoice.bvandroidsdk.BVSDK;
-import com.bazaarvoice.bvandroidsdk.BazaarEnvironment;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -19,10 +18,11 @@ public class App extends Application {
   public void onCreate() {
     super.onCreate();
 
-    bvsdk = BVSDK.builder(this, BazaarEnvironment.STAGING)
+    bvsdk = BVSDK.builder(this, Constants.BAZAAR_ENVIRONMENT)
         .logLevel(BVLogLevel.VERBOSE)
         .okHttpClient(getOkHttpClient(getLoggingInterceptor()))
         .build();
+    
     bvClient = new BVConversationsClient.Builder(bvsdk).build();
   }
 
@@ -36,13 +36,13 @@ public class App extends Application {
 
   private static OkHttpClient getOkHttpClient(HttpLoggingInterceptor loggingInterceptor) {
     return new OkHttpClient.Builder()
-        .addNetworkInterceptor(loggingInterceptor)
+        .addInterceptor(loggingInterceptor)
         .build();
   }
 
   private static HttpLoggingInterceptor getLoggingInterceptor() {
     final HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
-    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BASIC);
+    loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
     return loggingInterceptor;
   }
 }
