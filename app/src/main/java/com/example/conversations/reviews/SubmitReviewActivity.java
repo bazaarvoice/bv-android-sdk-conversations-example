@@ -8,7 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.bazaarvoice.bvandroidsdk.Action;
+import com.bazaarvoice.bvandroidsdk.AuthenticationProvider;
 import com.bazaarvoice.bvandroidsdk.BVConversationsClient;
+import com.bazaarvoice.bvandroidsdk.BVHostedAuthenticationProvider;
 import com.bazaarvoice.bvandroidsdk.ConversationsSubmissionCallback;
 import com.bazaarvoice.bvandroidsdk.ConversationsSubmissionException;
 import com.bazaarvoice.bvandroidsdk.ReviewSubmissionRequest;
@@ -29,9 +31,17 @@ public class SubmitReviewActivity extends AppCompatActivity {
     submitResult = findViewById(R.id.displayText);
     final BVConversationsClient bvClient = App.get(this).getBvClient();
 
+    final AuthenticationProvider authProvider = new BVHostedAuthenticationProvider(Constants.UAS); // if BV Hosted Authentication
+    // OR // = new SiteAuthenticationProvider(Constants.UAS); // if Site Authentication
+
     // Send Request
     final ReviewSubmissionRequest request = new ReviewSubmissionRequest
         .Builder(Action.Preview, Constants.PRODUCT_ID)
+        .authenticationProvider(authProvider)
+        .rating(5)
+        .title(Constants.REVIEW_TITLE)
+        .reviewText(Constants.REVIEW_TEXT)
+        .userNickname(Constants.USER_NICKNAME)
         .build();
     bvClient.prepareCall(request).loadAsync(viewFormCb);
   }

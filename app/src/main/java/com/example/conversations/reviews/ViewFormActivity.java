@@ -33,6 +33,7 @@ public class ViewFormActivity extends AppCompatActivity {
     // Send Request
     final ReviewSubmissionRequest request = new ReviewSubmissionRequest
         .Builder(Action.Form, Constants.PRODUCT_ID)
+        .userNickname(Constants.USER_NICKNAME)
         .build();
     bvClient.prepareCall(request).loadAsync(viewFormCb);
   }
