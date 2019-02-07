@@ -1,7 +1,7 @@
 package com.example.conversations;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.conversations.reviews.DisplayReviewsActivity;
 import com.example.conversations.reviews.SubmitReviewActivity;

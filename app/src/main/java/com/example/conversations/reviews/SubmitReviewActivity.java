@@ -3,8 +3,8 @@ package com.example.conversations.reviews;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.bazaarvoice.bvandroidsdk.Action;
