@@ -18,9 +18,9 @@ android {
     signingConfigs {
         release {
             storeFile file(STORE_FILE)
-                storePassword STORE_PASSWORD
-                keyAlias KEY_ALIAS
-                keyPassword KEY_PASSWORD
+            storePassword STORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
         }
     }
 
@@ -28,13 +28,13 @@ android {
         release {
             signingConfig signingConfigs.release
             minifyEnabled true
-            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         debug {
-            minifyEnabled true
+            debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix ".debug"
         }
     }
     compileOptions {
